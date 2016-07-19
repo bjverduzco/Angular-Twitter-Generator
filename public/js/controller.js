@@ -42,8 +42,9 @@ angular.module('twitterApp').controller('MainController', function($scope, $http
     for(var i = 0; i < 10; i++){
       $scope.twitter_handle[i] = $scope.adjectives[i].adjective + $scope.nouns[i].noun;
     }
+    $(function(){$('#pbandjtime').prepend('<a href="https://www.youtube.com/watch?v=s8MDNFaGfT4">@pbandjtime</a>');
     console.log($scope.twitter_handle);
-
+  })
 
   }
 
