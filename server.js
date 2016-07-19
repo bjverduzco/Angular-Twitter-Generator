@@ -51,7 +51,7 @@ app.get('/adjectives', function(request, response){
       console.log('Connection error', err);
     }
     client.query('SELECT adjective FROM adjectives;', function(err, result){
-      var nounList = {};
+      var adjectiveList = {};
       console.log(result.rows);
       nounList = result.rows;
       if(err){
