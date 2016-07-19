@@ -40,7 +40,7 @@ angular.module('twitterApp').controller('MainController', function($scope, $http
     $scope.nouns = shuffle($scope.nouns);
     $scope.adjectives = shuffle($scope.adjectives);
     for(var i = 0; i < 10; i++){
-      $scope.twitter_handle[i] = '@' + $scope.adjectives[i].adjective + $scope.nouns[i].noun;
+      $scope.twitter_handle[i] = $scope.adjectives[i].adjective + $scope.nouns[i].noun;
     }
     console.log($scope.twitter_handle);
 

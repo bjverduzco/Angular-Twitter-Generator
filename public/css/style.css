@@ -11,6 +11,9 @@ main{
 .row{
   text-align: center;
 }
+.results{
+  margin: 0 auto;
+}
 .btn-twitter {
   color: #FFFFFF;
   background-color: #55ACEE;

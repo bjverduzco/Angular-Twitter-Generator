@@ -13,11 +13,9 @@
     <header><h1>Twitter Handle Generator</h1></header>
     <main>
       <div class="row"><button ng-click="twitterHandle()" class="btn btn-lg btn-twitter">Generate!</button></div>
-      <ul>
-        <li ng-repeat="handle in twitter_handle track by $index">
-          {{handle}}
-        </li>
-      </ul>
+          <div class="row" ng-repeat="handle in twitter_handle track by $index">
+            <a ng-href="http://twitter.com/{{handle}}"><h3>@{{handle}}</h3></a>
+          </div>
     </main>
   </body>
 </html>
