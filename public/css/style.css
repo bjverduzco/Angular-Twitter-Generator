@@ -8,10 +8,9 @@ header{
 main{
   padding: 0 25px;
 }
-.genButton{
-  margin: 0 auto;
+.row{
+  text-align: center;
 }
-
 .btn-twitter {
   color: #FFFFFF;
   background-color: #55ACEE;
