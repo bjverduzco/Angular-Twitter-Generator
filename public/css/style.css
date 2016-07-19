@@ -8,6 +8,18 @@ header{
 main{
   padding: 0 25px;
 }
+a:link {
+    color: #292f33;
+}
+a:visited {
+    color: #292f33;
+}
+a:active {
+    color: #292f33;
+}
+a:hover {
+    color: #66757f;
+}
 .row{
   text-align: center;
 }
