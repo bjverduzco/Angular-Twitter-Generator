@@ -20,3 +20,5 @@ function handleServerStart(){
   var port = server.address().port;
   console.log('Listening on port: ', port);
 }
+
+// Status please?!
