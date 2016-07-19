@@ -14,13 +14,13 @@ app.use(express.static('public'));
 app.use('/', index);
 
 app.get('/nouns', function(request, response){
-  var dbClient = new pg.Client(config);
+  var client = new pg.Client(config);
 
   client.connect(function(err){
     if(err){
       console.log('Connection error', err);
     }
-    client.query('SELECT noun FROM nouns;', function(err, result){
+    client.query('SELECT * FROM nouns;', function(err, result){
       var nounList = {};
       console.log(result.rows);
       nounList = result.rows;
