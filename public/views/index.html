@@ -14,7 +14,7 @@
     <header><h1>Twitter Handle Generator</h1></header>
     <main>
       <div class="row"><button ng-click="twitterHandle()" class="btn btn-lg btn-twitter">Generate!</button></div>
-          <div class="row" id="pbandjtime" ng-repeat="handle in twitter_handle track by $index">
+          <div class="row"  ng-repeat="handle in twitter_handle track by $index">
             <a ng-href="http://twitter.com/{{handle}}" target="_blank"><h3>@{{handle}}</h3></a>
           </div>
     </main>
