@@ -59,7 +59,7 @@ app.get('/adjectives', function(request, response){
         response.sendStatus(500);
       } else {
         console.log('Great success', nounList);
-        response.send(nounList);
+        response.send(adjectiveList);
         response.sendStatus(200);
       }
 
