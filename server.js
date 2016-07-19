@@ -53,12 +53,12 @@ app.get('/adjectives', function(request, response){
     client.query('SELECT adjective FROM adjectives;', function(err, result){
       var adjectiveList = {};
       console.log(result.rows);
-      nounList = result.rows;
+      adjectiveList = result.rows;
       if(err){
         console.log('Query error', err);
         response.sendStatus(500);
       } else {
-        console.log('Great success', nounList);
+        console.log('Great success', adjectiveList);
         response.send(adjectiveList);
         response.sendStatus(200);
       }
