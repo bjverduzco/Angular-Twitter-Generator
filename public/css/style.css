@@ -1,7 +1,14 @@
 body{
   font-family: 'Raleway', sans-serif;
-
+  background: url('/img/logo.png');
 }
 header{
+  text-align: center;
+}
+main{
+  padding: 0 25px;
+}
+.genButton{
+  width: 100%;
   text-align: center;
 }
