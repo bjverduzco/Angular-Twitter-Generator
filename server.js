@@ -30,18 +30,18 @@ app.get('/nouns', function(request, response){
       } else {
         console.log('Great success', nounList);
         response.send(nounList);
-        response.sendStatus(200);
+        // response.sendStatus(200);
       }
 
       client.end(function(err){
         if(err){
           console.log('Disconnect error', err);
         }
-      })
-    })
-  })
+      });
+    });
+  });
 
-})
+});
 
 app.get('/adjectives', function(request, response){
   var client = new pg.Client(config);
@@ -60,18 +60,18 @@ app.get('/adjectives', function(request, response){
       } else {
         console.log('Great success', adjectiveList);
         response.send(adjectiveList);
-        response.sendStatus(200);
+        // response.sendStatus(200);
       }
 
       client.end(function(err){
         if(err){
           console.log('Disconnect error', err);
         }
-      })
-    })
-  })
+      });
+    });
+  });
 
-})
+});
 
 var server = app.listen(3000, handleServerStart);
 
