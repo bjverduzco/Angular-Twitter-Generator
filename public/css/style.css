@@ -11,3 +11,49 @@ main{
 .genButton{
   margin: 0 auto;
 }
+
+.btn-twitter {
+  color: #FFFFFF;
+  background-color: #55ACEE;
+  border-color: #E1E8ED;
+}
+
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  color: #FFFFFF;
+  background-color: #66757f;
+  border-color: #E1E8ED;
+}
+
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  background-image: none;
+}
+
+.btn-twitter.disabled,
+.btn-twitter[disabled],
+fieldset[disabled] .btn-twitter,
+.btn-twitter.disabled:hover,
+.btn-twitter[disabled]:hover,
+fieldset[disabled] .btn-twitter:hover,
+.btn-twitter.disabled:focus,
+.btn-twitter[disabled]:focus,
+fieldset[disabled] .btn-twitter:focus,
+.btn-twitter.disabled:active,
+.btn-twitter[disabled]:active,
+fieldset[disabled] .btn-twitter:active,
+.btn-twitter.disabled.active,
+.btn-twitter[disabled].active,
+fieldset[disabled] .btn-twitter.active {
+  background-color: #55ACEE;
+  border-color: #E1E8ED;
+}
+
+.btn-twitter .badge {
+  color: #55ACEE;
+  background-color: #FFFFFF;
+}
