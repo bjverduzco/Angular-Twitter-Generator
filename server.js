@@ -8,11 +8,40 @@ var config = {
   port: 5432
 };
 
-var dbClient = new pg.Client(config);
 
 app.use(express.static('public'));
 
 app.use('/', index);
+
+app.get('/nouns', function(request, response){
+  var dbClient = new pg.Client(config);
+
+  client.connect(function(err){
+    if(err){
+      console.log('Connection error', err);
+    }
+    client.query('SELECT noun FROM nouns;', function(err, result){
+      var nounList = {};
+      console.log(result.rows);
+      nounList = result.rows;
+      if(err){
+        console.log('Query error', err);
+        response.sendStatus(500);
+      } else {
+        console.log('Great success', nounList);
+        response.send(nounList);
+        response.sendStatus(200);
+      }
+
+      client.end(function(err){
+        if(err){
+          console.log('Disconnect error', err);
+        }
+      })
+    })
+  })
+
+})
 
 var server = app.listen(3000, handleServerStart);
 
@@ -20,5 +49,3 @@ function handleServerStart(){
   var port = server.address().port;
   console.log('Listening on port: ', port);
 }
-
-// Status please?!
