@@ -5,7 +5,8 @@ angular.module('twitterApp').controller('MainController', function($scope, $http
   $scope.twitter_handle = [];
 
   var twitterHandle = function(){
-    $http.get('/twitterHandle').then(handleSuccess, handleFailure);
+    $http.get('/nouns').then(handleSuccess, handleFailure);
+    $http.get('/adjectives').then(handleSuccess, handleFailure);
   };
 
   function handleSuccess(response){
